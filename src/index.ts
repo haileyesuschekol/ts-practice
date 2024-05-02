@@ -48,10 +48,26 @@ let employee: Employee = {
 
 // advanced
 
-// union type
+// union type -- combining types
 function kgToLibs(weight: number | string): number {
   if (typeof weight === "number") return weight * 2.2
   else return parseInt(weight) * 2.2
 }
 kgToLibs(10)
 kgToLibs("10")
+
+// type intersection
+
+type draggable = {
+  drag: () => void
+}
+type resizable = {
+  resize: () => void
+}
+
+type uiWidget = draggable & resizable
+
+let textBox: uiWidget = {
+  drag: () => {},
+  resize: () => {},
+}
