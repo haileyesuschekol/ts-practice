@@ -29,17 +29,29 @@ function calc(tax: number): number {
   if (tax < 2023) return 10
   return 15
 }
-
-// objects
-
-let employee: {
+// type aliase
+type Employee = {
   id: number
   name: string
   retire: (date: Date) => void
-} = {
+}
+
+// objects
+
+let employee: Employee = {
   id: 1,
   name: "userName",
   retire(date: Date) {
     console.log(date)
   },
 }
+
+// advanced
+
+// union type
+function kgToLibs(weight: number | string): number {
+  if (typeof weight === "number") return weight * 2.2
+  else return parseInt(weight) * 2.2
+}
+kgToLibs(10)
+kgToLibs("10")
