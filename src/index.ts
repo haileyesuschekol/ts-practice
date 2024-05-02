@@ -88,6 +88,5 @@ let speed: number | null = null
 let ride = {
   speed: speed ?? 30,
 }
-
 // type assertion --telling type to compiler
 let phone = document.getElementById("phone") as HTMLInputElement
