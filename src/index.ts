@@ -81,5 +81,11 @@ function greet(name: string | null) {
   if (name) console.log(name)
   else console.log("Hola!")
 }
-
 greet(null)
+
+// nullish coaelscing -- check null or undifined value
+
+let speed: number | null = null
+let ride = {
+  speed: speed ?? 30,
+}
