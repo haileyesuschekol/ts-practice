@@ -75,3 +75,11 @@ let textBox: uiWidget = {
 // literal --exact same as defined
 type Quantity = 50 | 100
 let quantity: Quantity = 100
+
+// nullable type
+function greet(name: string | null) {
+  if (name) console.log(name)
+  else console.log("Hola!")
+}
+
+greet(null)
