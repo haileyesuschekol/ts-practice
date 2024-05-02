@@ -84,8 +84,10 @@ function greet(name: string | null) {
 greet(null)
 
 // nullish coaelscing -- check null or undifined value
-
 let speed: number | null = null
 let ride = {
   speed: speed ?? 30,
 }
+
+// type assertion --telling type to compiler
+let phone = document.getElementById("phone") as HTMLInputElement
