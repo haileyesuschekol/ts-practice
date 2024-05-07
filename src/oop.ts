@@ -16,11 +16,11 @@ class Account {
     if (amount < 0) throw new Error("invalid amount")
     this.balance += amount
   }
-  getBalance(): number {
+  get getBalance(): number {
     return this.balance
   }
 }
 
 const account = new Account(1, "Jo", 0)
 account.deposit(100)
-console.log(account.getBalance())
+console.log(account.getBalance)
