@@ -23,4 +23,14 @@ class Account {
 
 const account = new Account(1, "Jo", 0)
 account.deposit(100)
-console.log(account.getBalance)
+// console.log(account.getBalance)
+
+class SeatAssignment {
+  [seatNumber: string]: string
+}
+
+const seats = new SeatAssignment()
+
+seats.a1 = "seat1"
+seats.a1 = "seat2"
+// console.log(seats.a1)
