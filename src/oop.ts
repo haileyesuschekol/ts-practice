@@ -1,12 +1,16 @@
 class Account {
-  readonly id: number
-  owner: string
-  private balance: number
+  //   readonly id: number
+  //   owner: string
+  //   private balance: number
   nickName?: string
-  constructor(id: number, owner: string, balance: number) {
-    this.id = id
-    this.owner = owner
-    this.balance = balance
+  constructor(
+    public readonly id: number,
+    public owner: string,
+    private balance: number
+  ) {
+    // this.id = id
+    // this.owner = owner
+    // this.balance = balance
   }
   deposit(amount: number): void {
     if (amount < 0) throw new Error("invalid amount")
