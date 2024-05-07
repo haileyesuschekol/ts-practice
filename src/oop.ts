@@ -34,3 +34,23 @@ const seats = new SeatAssignment()
 seats.a1 = "seat1"
 seats.a1 = "seat2"
 // console.log(seats.a1)
+
+class Person {
+  constructor(public fName: string, public lName: string) {}
+  talk() {
+    console.log("yes")
+  }
+}
+
+class Student extends Person {
+  constructor(fName: string, lName: string) {
+    super(fName, lName)
+  }
+  getScore() {
+    console.log("A")
+  }
+}
+
+const stud1 = new Student("jo", "li")
+
+// console.log(`${stud1.fName} ${stud1.lName}`)
