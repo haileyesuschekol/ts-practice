@@ -37,8 +37,8 @@ seats.a1 = "seat2"
 
 class Person {
   constructor(public fName: string, public lName: string) {}
-  talk() {
-    console.log("yes")
+  get fullName() {
+    return `${this.fName} ${this.lName}`
   }
 }
 
@@ -49,8 +49,11 @@ class Student extends Person {
   getScore() {
     console.log("A")
   }
+  override get fullName() {
+    return `mr ` + super.fullName
+  }
 }
 
 const stud1 = new Student("jo", "li")
 
-// console.log(`${stud1.fName} ${stud1.lName}`)
+console.log(stud1.fullName)
