@@ -57,3 +57,23 @@ class Student extends Person {
 const stud1 = new Student("jo", "li")
 
 console.log(stud1.fullName)
+
+interface Calander {
+  name: string
+  addEvent(): void
+  removeEvent(): void
+}
+
+interface cloudeCalander {
+  sync(): void
+}
+
+class GoogleCalander implements Calander {
+  constructor(public name: string) {}
+  addEvent(): void {
+    throw new Error("Method not implemented.")
+  }
+  removeEvent(): void {
+    throw new Error("Method not implemented.")
+  }
+}
