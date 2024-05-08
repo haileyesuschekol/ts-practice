@@ -8,5 +8,9 @@ const pair = new KeyPair<string, number>("a", 4)
 function arrayList<v>(value: v) {
   return [value]
 }
-
 let num = arrayList(1)
+
+function echo<t extends number | string>(value: t) {
+  return value
+}
+// echo(1)
